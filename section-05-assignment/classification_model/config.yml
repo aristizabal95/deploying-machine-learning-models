@@ -1,0 +1,40 @@
+# Package Overview
+package_name: classification_model
+
+# Data Files
+training_data_file: data.csv
+test_data_file: data.csv
+
+# Variables
+# The variable we are attempting to predict
+target: survived
+
+pipeline_name: classification_model
+pipeline_save_file: classification_model_output_v
+
+numerical_variables:
+  - age
+  - fare
+
+categorical_variables:
+  - sex
+  - cabin
+  - embarked
+  - title
+
+rare_label_tolerance: 0.05
+rare_label_n_categories: 1
+regression_c: 0.0005
+
+drop_variables:
+  - name
+  - ticket
+  - boat
+  - body
+  - home.dest
+
+extract_letter_variables:
+  - cabin
+
+test_size: 0.2
+random_state: 0
